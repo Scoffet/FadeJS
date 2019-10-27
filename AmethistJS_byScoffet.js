@@ -1,12 +1,7 @@
 
 // Bem vindo à AmethistJS, feito por mim Scoffet ou Kiel
-// para utilizar basta linkar esse arquivo javascript no final do body de sua página
-// antes de linkar esse arquivo, cole o seguinte código "<div id='amethistimport'> </div>" para
-// importações do Amethist. LEMBRANDO QUE A DIV DEVE VIR ANTES DO SCRIPT AMETHIST.
+// para utilizar basta ter jQuery no seu site.
 
-var jquery = document.createElement('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>');
-document.querySelector('#amethistimport').appendChild(jquery);
-console.log("AmethistJs - JQuery importado.");
 function onChanges(){
     $('body').css({'overflow-x':'hidden'});
     // Transparent Effect
@@ -18,6 +13,7 @@ function onChanges(){
             $(element).css({'transform':'translateX('+('+'+((parseInt($(window).width())-($(element).offset().left+parseInt($(element).width()))) + parseInt($(element).width()))+'px')+')'});
          } 
         $(element).css({'transition-property':'all','transition-duration':'2s'})
+        $(element).css({'opacity':"0"});
     }
     var allElements = $('.fade_element').toArray();
         for(var element of allElements){
